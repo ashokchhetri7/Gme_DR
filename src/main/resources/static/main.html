@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Tester</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>DEBUG: Main HTML Page Loaded Successfully</h1>
+
+<h1>API Tester</h1>
+<table>
+    <thead>
+    <tr>
+        <th>API Endpoint</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>/api/endpoint1</td>
+        <td><button onclick="testApi('/api/endpoint1')">Test</button></td>
+    </tr>
+    <tr>
+        <td>/api/endpoint2</td>
+        <td><button onclick="testApi('/api/endpoint2')">Test</button></td>
+    </tr>
+    <tr>
+        <td>/api/endpoint3</td>
+        <td><button onclick="testApi('/api/endpoint3')">Test</button></td>
+    </tr>
+    <tr>
+        <td>/api/invalid</td>
+        <td><button onclick="testApi('/api/invalid')">Test</button></td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Response:</h3>
+<pre id="response"></pre>
+
+<script>
+    async function testApi(endpoint) {
+        const responseElement = document.getElementById('response');
+        try {
+            const response = await fetch(endpoint);
+            if (!response.ok) {
+                throw new Error(`${response.status} - ${response.statusText}`);
+            }
+            const data = await response.text();
+            responseElement.textContent = `Success: ${data}`;
+        } catch (error) {
+            responseElement.textContent = `Error: ${error.message}`;
+        }
+    }
+</script>
+</body>
+</html>
