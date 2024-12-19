@@ -16,4 +16,7 @@ public class MainRecoverDR {
 http://localhost:8084/api/v3/mobile/CustomerProfile
 http://localhost:8084/api/v1/users/access-code
 http://localhost:8084/api/v1/mobile/ConfirmPassword
+http://localhost:8084/static/main.html
+http://localhost:8084/randomurl
+
  */

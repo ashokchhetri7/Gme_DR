@@ -15,8 +15,6 @@ public class ApiConfiguration implements WebMvcConfigurer {
         ALLOWED_ENDPOINTS.add("/api/v3/mobile/CustomerProfile");
         ALLOWED_ENDPOINTS.add("/api/v1/users/access-code");
         ALLOWED_ENDPOINTS.add("/api/v1/mobile/ConfirmPassword");
-        ALLOWED_ENDPOINTS.add("/main.html");
-        ALLOWED_ENDPOINTS.add("/static/main.html");
     }
 
     @Override

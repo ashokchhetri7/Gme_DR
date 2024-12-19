@@ -40,22 +40,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>/api/endpoint1</td>
-        <td><button onclick="testApi('/api/v3/mobile/CustomerProfile')">Test</button></td>
-    </tr>
-    <tr>
-        <td>/api/endpoint2</td>
-        <td><button onclick="testApi('/api/v1/users/access-code')">Test</button></td>
-    </tr>
-    <tr>
-        <td>/api/endpoint3</td>
-        <td><button onclick="testApi('/api/v1/mobile/ConfirmPassword')">Test</button></td>
-    </tr>
-    <tr>
-        <td>/api/invalid</td>
-        <td><button onclick="testApi('/api/invalid')">Test</button></td>
-    </tr>
+    <tr><td><button onclick="testApi('/api/v3/mobile/CustomerProfile')">Test</button></td></tr>
+    <tr><td><button onclick="testApi('/api/v1/users/access-code')">Test</button></td></tr>
+    <tr><td><button onclick="testApi('/api/v1/mobile/ConfirmPassword')">Test</button></td></tr>
+    <tr><td><button onclick="testApi('/api/invalid')">Test</button></td></tr>
     </tbody>
 </table>
 
@@ -66,7 +54,7 @@
     async function testApi(endpoint) {
         const responseElement = document.getElementById('response');
         try {
-            const response = await fetch(endpoint);
+            const response = await fetch(endpoint, { method: 'GET' });
             if (!response.ok) {
                 throw new Error(`${response.status} - ${response.statusText}`);
             }
