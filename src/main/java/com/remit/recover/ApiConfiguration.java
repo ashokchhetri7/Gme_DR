@@ -15,6 +15,7 @@ public class ApiConfiguration implements WebMvcConfigurer {
         ALLOWED_ENDPOINTS.add("/api/v3/mobile/CustomerProfile");
         ALLOWED_ENDPOINTS.add("/api/v1/users/access-code");
         ALLOWED_ENDPOINTS.add("/api/v1/mobile/ConfirmPassword");
+        ALLOWED_ENDPOINTS.add("/api/v1/mobile/Zero/ping");
     }
 
     @Override
@@ -24,4 +25,3 @@ public class ApiConfiguration implements WebMvcConfigurer {
                 .setCachePeriod(3600);
     }
 }
-

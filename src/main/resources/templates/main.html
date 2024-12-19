@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Tester</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .action-form {
+            margin: 0;
+        }
+        .action-form button {
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+        .action-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<h1>API Tester</h1>
+<table>
+    <thead>
+    <tr>
+        <th>API Endpoint</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Endpoint 1</td>
+        <td>
+            <form class="action-form" action="/api/v3/mobile/CustomerProfile" method="get">
+                <button type="submit">Go</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Endpoint 2</td>
+        <td>
+            <form class="action-form" action="/api/v1/users/access-code" method="get">
+                <button type="submit">Go</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Endpoint 3</td>
+        <td>
+            <form class="action-form" action="/api/v1/mobile/ConfirmPassword" method="get">
+                <button type="submit">Go</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Endpoint 4</td>
+        <td>
+            <form class="action-form" action="/api/v1/mobile/Zero/ping" method="get">
+                <button type="submit">Go</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Endpoint 5 (Invalid)</td>
+        <td>
+            <form class="action-form" action="/api/invalid" method="get">
+                <button type="submit">Go</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
