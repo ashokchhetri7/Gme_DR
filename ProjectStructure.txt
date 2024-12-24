@@ -1,3 +1,29 @@
+DRGateway/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── remit/
+│   │   │           └── recover/
+│   │   │               ├── DRGatewayApplication.java
+│   │   │               ├── config/
+│   │   │               │   ├── SecurityConfig.java
+│   │   │               │   └── SecurityWhiteListConfig.java
+│   │   │               └── filters/
+│   │   │                   └── LoggingFilter.java (optional)
+│   │   └── resources/
+│   │       └── application.properties
+└── pom.xml
+
+
+Prompt:
+"Develop a Spring Boot application using Spring Cloud Gateway that acts as a routing gateway. Configure it to redirect whitelisted URLs to a target destination while blocking all other requests. Ensure support for GET, POST, PUT, and DELETE methods. Address dependency issues in pom.xml and configure security settings to permit requests to whitelisted paths without blocking them. Provide a project structure with DRGatewayApplication.java, SecurityConfig.java, SecurityWhiteListConfig.java, and an optional LoggingFilter.java. Test the setup using Postman."
+
+
+
+// Need to check the post response
+// The post responses are to be mapped for the authenticaiton process
+
 # src/main/resources/application.properties
 
 # Server Configuration
@@ -46,3 +72,4 @@ logging.level.org.springframework.web=DEBUG
 logging.level.org.springframework.cloud.gateway=DEBUG
 logging.level.org.springframework.boot.devtools=DEBUG
 logging.level.com.remit.recover=DEBUG
+
