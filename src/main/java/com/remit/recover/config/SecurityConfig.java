@@ -2,6 +2,8 @@
 
 package com.remit.recover.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -17,9 +19,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Configuration
-@RequiredArgsConstructor
 public class SecurityConfig {
     private final SecurityWhiteListConfig whitelistConfig;
+
+    @Autowired
+    public SecurityConfig(@Qualifier("securityWhiteListConfig") SecurityWhiteListConfig whitelistConfig) {
+        this.whitelistConfig = whitelistConfig;
+    }
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {

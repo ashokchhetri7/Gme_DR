@@ -1,0 +1,44 @@
+POST
+/api/v1/mobile/getChannelTalk/ 9030207
+
+GET
+/api/v1/mobile/GetCustomerServiceContactDetails/remittance?customerld=9030207
+
+POST
+/api/v1/mobile/Card/GetCardList
+
+GET
+/api/v3/Mobile/Information/9030207
+
+POST
+/api/v3/mobile/CustomerProfile
+
+POST
+/api/v1/users/access-code
+
+GET
+/api/v1/mobile/countriesServices
+
+POST
+/api/v2/kftc/GetAdminVerification
+
+GET
+/api/v1/mobile/Card/GetBanner/9030207
+
+GET
+/api/v1/coupon/inAppBannerList/? customerld=9030207&launchURL=HOME
+
+POST
+/api/v3/mobile/CustomerProfile
+
+POST
+/api/v1/mobile/ExpiredPassword
+
+POST
+/api/v1/mobile/getChannelTalk/9030207
+
+GET
+/api/v1/mobile/GetCustomerServiceContactDetails/ remittance?customerld=9030207
+
+POST
+/api/v1/mobile/Card/GetCardList
